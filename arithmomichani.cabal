@@ -1,0 +1,61 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 85556199673059c0d9665cea6f34e7034048efc0188af97dbad9c06ace7deadd
+
+name:           arithmomichani
+version:        0.0.1.0
+description:    Please see the README on GitHub at <https://github.com/g-andrade/arithmomichani#readme>
+homepage:       https://github.com/g-andrade/arithmomichani#readme
+bug-reports:    https://github.com/g-andrade/arithmomichani/issues
+author:         Guilherme Andrade
+maintainer:     noone@nowhere
+copyright:      2020 Guilherme Andrade
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/g-andrade/arithmomichani
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_arithmomichani
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable arithmomichani-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_arithmomichani
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      arithmomichani
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite arithmomichani-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_arithmomichani
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      arithmomichani
+    , base >=4.7 && <5
+  default-language: Haskell2010
